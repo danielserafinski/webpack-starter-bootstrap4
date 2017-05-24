@@ -1,8 +1,44 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
 body {
-    background-color: pink;
-	background-image: url('../images/bg.jpeg');
-    p {
-        color: green;
-    }
-    display: flex;
+	background-image: url('../images/bg_webpack.png');
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+.main{
+	@extend .container;
+	height: 100%;
+	&__row{
+		@extend .row;
+		@extend .justify-content-center;
+		@extend .align-items-center;
+		height: 100%;			
+	}
+	&__col{
+		@extend .col;
+	}
+}
+.title{
+	&__description{
+		@extend .text-muted;
+	}
+}
+.icons{
+	@extend .list-inline;
+	
+	&__element{
+		@extend .list-inline-item;
+		&-img{
+			@extend .img-fluid;
+		}
+	}
+}
+.message{
+	@extend .collapse;
+	&__info{
+		@extend .card;
+		@extend .card-block;
+	}
 }

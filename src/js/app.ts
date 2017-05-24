@@ -1,2 +1,2 @@
-console.log('Hello from app.js!');
-//$('#test').hide();
+console.log('Hello from app.ts!');
+$('#message').hide().fadeIn(5000);
